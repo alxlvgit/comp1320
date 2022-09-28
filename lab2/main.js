@@ -15,7 +15,7 @@ const getDayOfTheWeekForUserDate = (year, month, day) => {
     console.log(`The day of the week is ${lab2.getDayOfTheWeek(year, month, day)}. You checked for: ${month} ${day}, ${year}.`);
 }
 
-// INTERACTION WITH USER
+// INTERACTION WITH THE USER
 
 // Start program in a loop, exit when all done
 while (!endProgram) {

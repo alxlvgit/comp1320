@@ -35,7 +35,7 @@ const getMonthCode = (month, year) => {
     return monthCodes[month];
 }
 
-// Returns additional offset if the year is foond in a special range
+// Returns additional offset if the year is found in a special range
 const specialOffsets = (year) => {
     const specialYears = { 16: 6, 17: 4, 18: 2, 20: 6, 21: 4 };
     for (var element in specialYears) {
@@ -55,7 +55,7 @@ const getDayOfTheWeek = (year, month, day) => {
     return DAYS[stepFour];
 }
 
-// If month exists, returns the number of days in a specified month, based on the year
+// If month exists, returns a number of the days in a specified month, based on the year
 const numberOfDaysInAMonth = (month, year) => {
     for (var value of MONTHS) {
         if (value == month) {

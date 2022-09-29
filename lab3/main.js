@@ -30,8 +30,7 @@ const writeToFile = (filePath, inputs) => {
     fs.writeFile(`${filePath}/points.txt`, JSON.stringify(inputs), (err) => {
         if (err) {
             console.log(err);
-        }
-        else {
+        } else {
             console.log("Content saved");
             fs.appendFile(`${filePath}/points.txt`,
                 `\nThe distance between your two points:(${inputs.x1}, ${inputs.y1}), (${inputs.x2}, ${inputs.y2}) is ${distance}`,
@@ -51,22 +50,18 @@ const processInput = (folderName, inputs) => {
             if (err && err.code === "EEXIST") {
                 folderName = `temp_${folderName}`;
                 processInput(folderName, inputs);
-            }
-            else if (err && err.code !== "EEXIST") {
+            } else if (err && err.code !== "EEXIST") {
                 console.log(err);
-            }
-            else {
+            } else {
                 if (folderName === mainDirName) {
                     console.log("Directory dataPoints successfully created");
-                }
-                else {
+                } else {
                     console.log(`Folder ${folderName.substring(5, folderName.length)} already exists. Creating a new folder for you called ${folderName}.`);
                 }
                 writeToFile(folderName, inputs);
             }
         });
-    }
-    else {
+    } else {
         console.log("Invalid inputs. Please try again");
     }
 };

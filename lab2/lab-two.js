@@ -16,8 +16,7 @@ const getLastTwoDigits = (year) => {
 const isLeapYear = (year) => {
     if (year % 4 == 0 && year % 100 != 0) {
         return true;
-    }
-    else if (year % 400 == 0) {
+    } else if (year % 400 == 0) {
         return true;
     }
     return false;
@@ -96,8 +95,7 @@ const validInputCheck = (input) => {
             return true;
         }
         return false;
-    }
-    else if (typeof (input) == "number" && !isNaN(input)) {
+    } else if (typeof (input) == "number" && !isNaN(input)) {
         if (input > 0) {
             return true;
         }

@@ -28,8 +28,7 @@ while (!endProgram) {
         if (lab2.validInputCheck(yearInput)) {
             year = yearInput;
             validYearInput = true;
-        }
-        else {
+        } else {
             console.log("Your year input is not correct. Please, try again.");
         }
     }
@@ -41,8 +40,7 @@ while (!endProgram) {
         if (lab2.validInputCheck(monthInput)) {
             month = monthInput;
             validMonthInput = true;
-        }
-        else {
+        } else {
             console.log("Your month input is not correct. Please, try again.");
         }
     }
@@ -54,8 +52,7 @@ while (!endProgram) {
         if (dayInput <= lab2.numberOfDaysInAMonth(month, year) && lab2.validInputCheck(dayInput)) {
             day = dayInput;
             validDayInput = true;
-        }
-        else {
+        } else {
             console.log("Your day input is not correct. Please, try again.");
         }
     }
@@ -70,8 +67,7 @@ while (!endProgram) {
         if (userResponse == "Y" || userResponse == "y") {
             lab2.makeCalendar();
             responseReceived = true;
-        }
-        else if (userResponse == "N" || userResponse == "n") {
+        } else if (userResponse == "N" || userResponse == "n") {
             responseReceived = true;
         }
     }
